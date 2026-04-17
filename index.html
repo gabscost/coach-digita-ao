@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coach de Digitação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- Cabeçalho -->
+  <div class="header">
+    <div class="header-eyebrow">Coach de Digitação</div>
+    <h1>Treine sem olhar para o teclado</h1>
+    <p>Módulos progressivos · Minigames · Avaliação em tempo real</p>
+  </div>
+
+  <!-- Abas -->
+  <div class="tabs">
+    <button class="tab active" onclick="showTab('treino', this)">Treino</button>
+    <button class="tab" onclick="showTab('minigames', this)">Minigames</button>
+    <button class="tab" onclick="showTab('progresso', this)">Progresso</button>
+  </div>
+
+  <!-- ── ABA TREINO ── -->
+  <div id="tab-treino" class="tab-panel active">
+    <div class="menu-grid" id="menu-grid">
+
+      <div class="module-card" onclick="selectModule(1)">
+        <div class="num">M1</div>
+        <h3>Fundação</h3>
+        <p>Linha guia ASDF JKLÇ — base de tudo</p>
+      </div>
+
+      <div class="module-card" onclick="selectModule(2)">
+        <div class="num">M2</div>
+        <h3>Expansão</h3>
+        <p>Linhas superior e inferior do teclado</p>
+      </div>
+
+      <div class="module-card" onclick="selectModule(3)">
+        <div class="num">M3</div>
+        <h3>Eficiência</h3>
+        <p>Shift, maiúsculas e pontuação</p>
+      </div>
+
+      <div class="module-card" onclick="selectModule(4)">
+        <div class="num">M4</div>
+        <h3>Avançado</h3>
+        <p>Código real: {} [] () ; em JavaScript e Python</p>
+      </div>
+
+      <div class="module-card" onclick="selectModule(5)">
+        <div class="num">M5</div>
+        <h3>Ritmo</h3>
+        <p>Textos longos — foco em cadência constante</p>
+      </div>
+
+      <div class="module-card" onclick="selectModule(6)">
+        <div class="num">M6</div>
+        <h3>Números</h3>
+        <p>Linha numérica 1–0 sem olhar para cima</p>
+      </div>
+
+    </div>
+
+    <!-- Área de treino gerada pelo JS -->
+    <div id="treino-section"></div>
+  </div>
+
+  <!-- ── ABA MINIGAMES ── -->
+  <div id="tab-minigames" class="tab-panel">
+
+    <div class="menu-grid">
+
+      <div class="module-card" onclick="startMG('speed')">
+        <div class="num">Game 1</div>
+        <h3>⚡ Sprint de 30s</h3>
+        <p>Digite o máximo de palavras em 30 segundos</p>
+      </div>
+
+      <div class="module-card" onclick="startMG('erro')">
+        <div class="num">Game 2</div>
+        <h3>🔍 Caça ao erro</h3>
+        <p>Detecte e corrija as letras erradas no texto</p>
+      </div>
+
+      <div class="module-card" onclick="startMG('flip')">
+        <div class="num">Game 3</div>
+        <h3>🃏 Carta certa</h3>
+        <p>Adivinhe a tecla antes de virar a carta</p>
+      </div>
+
+      <div class="module-card" onclick="startMG('code')">
+        <div class="num">Game 4</div>
+        <h3>💻 Copiar código</h3>
+        <p>Reproduza o trecho de código sem errar</p>
+      </div>
+
+      <div class="module-card" onclick="startMG('ditado')">
+        <div class="num">Game 5</div>
+        <h3>🎤 Ditado visual</h3>
+        <p>Memorize o texto por 5s e escreva de cabeça</p>
+      </div>
+
+      <div class="module-card" onclick="startMG('memoria')">
+        <div class="num">Game 6</div>
+        <h3>🧩 Sequência de teclas</h3>
+        <p>Memorize e reproduza uma sequência de letras</p>
+      </div>
+
+    </div>
+
+    <!-- Área do minigame gerada pelo JS -->
+    <div id="mg-section"></div>
+  </div>
+
+  <!-- ── ABA PROGRESSO ── -->
+  <div id="tab-progresso" class="tab-panel">
+    <div id="prog-content"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
